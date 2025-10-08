@@ -24,9 +24,10 @@ const cambiar = ()=>setAbierto(!abierto)
 
 return(
   <>
+  <div>
  
   {
-    cargando && <h1>ESPERE UNOS MINUTOS</h1>
+    cargando && <h1>ESPERE UNOS MINUTOS, MUCHAS GRACIAS!!!</h1>
   }
 
   {abierto &&
@@ -36,7 +37,7 @@ return(
   </div>
 
   }
-
+</div>
   </>
 ) 
 }
