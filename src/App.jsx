@@ -27,26 +27,13 @@ const cambiar = ()=>setAbierto(!abierto)
 
 
 
-        // Seleccionamos el botón por su ID
-        const button = document.getElementById('changeColorButton');
-
-        // Función para generar un color aleatorio en formato hexadecimal
-        function getRandomColor() {
-            return '#' + Math.floor(Math.random() * 16777215).toString(16);
-        }
-
-        // Agregamos un evento al botón para cambiar el color de fondo
-        button.addEventListener('click', () => {
-            const randomColor = getRandomColor(); // Generamos un color aleatorio
-            document.body.style.backgroundColor = randomColor; // Cambiamos el fondo
-        });
 
 return(
   <>
-  <div>
+  <div className='bg-emerald-800'>
  
   {
-    cargando && <h1>ESPERE UNOS MINUTOS, MUCHAS GRACIAS!!!</h1>
+    cargando && <h1 >ESPERE UNOS MINUTOS, MUCHAS GRACIAS!!!</h1>
   }
 
   {abierto &&
@@ -57,8 +44,7 @@ return(
 
   }
 
-    <h1>Cambiar el Color de Fondo</h1>
-    <button id="changeColorButton">Cambiar Color</button>
+
 
 </div>
   </>
