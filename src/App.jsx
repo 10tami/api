@@ -29,7 +29,7 @@ const cambiar = ()=>setAbierto(!abierto)
 
 return(
   <>
-  <div className='bg-emerald-800 w-150 h-140'>
+  <div className='bg-emerald-800 w-150 h-100dvh'>
  
   {
     cargando && <h1 >ESPERE UNOS MINUTOS, MUCHAS GRACIAS!!!</h1>
@@ -60,13 +60,6 @@ return(
 
 
 
-<TextType 
-  text={["Text typing effect", "for your websites", "Happy coding!"]}
-  typingSpeed={75}
-  pauseDuration={1500}
-  showCursor={true}
-  cursorCharacter="|"
-/>
 
   </>
 ) 
