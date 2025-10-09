@@ -1,7 +1,5 @@
 import { useState , useEffect} from 'react'
 import './App.css'
-import './App.css'
-
 
 
 function App() {
@@ -44,7 +42,9 @@ return(
 
   }
 
-
+<h2>Los perros son compañeros leales </h2>
+<h2>Ellos nos dan su amor incondicional</h2>
+<h2>¡¡¡Eso sí que es un amigo de verdad!!!</h2>
 
 </div>
   </>
