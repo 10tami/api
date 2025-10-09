@@ -1,12 +1,13 @@
 import { useState , useEffect} from 'react'
 import './App.css'
-
+import saludar from './Doc.js'
+import TextType from './Componentes.jsx/TextType.jsx';
 
 function App() {
   const [data, setData] = useState([])
   const [abierto, setAbierto] = useState (true)
   const [cargando, setCargando] = useState (true)
-
+ console.log(saludar("SEÑOR USUARIO"));
   useEffect (() => {
     const fetchData = async () => {
   try {
@@ -28,7 +29,7 @@ const cambiar = ()=>setAbierto(!abierto)
 
 return(
   <>
-  <div className='bg-emerald-800'>
+  <div className='bg-emerald-800 w-150 h-140'>
  
   {
     cargando && <h1 >ESPERE UNOS MINUTOS, MUCHAS GRACIAS!!!</h1>
@@ -39,14 +40,34 @@ return(
     { <img src={data.message}></img> }
 
   </div>
+  
 
   }
 
-<h2>Los perros son compañeros leales </h2>
-<h2>Ellos nos dan su amor incondicional</h2>
-<h2>¡¡¡Eso sí que es un amigo de verdad!!!</h2>
+
+
+
+<TextType 
+  text={["Los perros son compañeros leales", "Ellos nos dan su amor incondicional", "¡¡¡Eso sí que es un amigo de verdad!!!"]}
+  typingSpeed={75}
+  pauseDuration={1500}
+  showCursor={true}
+  cursorCharacter="|"
+/>
+
 
 </div>
+
+
+
+<TextType 
+  text={["Text typing effect", "for your websites", "Happy coding!"]}
+  typingSpeed={75}
+  pauseDuration={1500}
+  showCursor={true}
+  cursorCharacter="|"
+/>
+
   </>
 ) 
 }
